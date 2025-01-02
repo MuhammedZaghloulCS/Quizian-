@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.myownportfolio.quizian.UI.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_makeQuiz"
+            app:destination="@id/makeQuiz" />
+        <action
+            android:id="@+id/action_home2_to_quiz"
+            app:destination="@id/quiz" />
+    </fragment>
+    <fragment
+        android:id="@+id/makeQuiz"
+        android:name="com.myownportfolio.quizian.UI.fragments.MakeQuiz"
+        android:label="fragment_make_quiz"
+        tools:layout="@layout/fragment_make_quiz" >
+        <action
+            android:id="@+id/action_makeQuiz_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_makeQuiz_to_showQuiz"
+            app:destination="@id/showQuiz" />
+    </fragment>
+    <fragment
+        android:id="@+id/showQuiz"
+        android:name="com.myownportfolio.quizian.UI.fragments.ShowQuiz"
+        android:label="fragment_show_quiz"
+        tools:layout="@layout/fragment_show_quiz" >
+        <action
+            android:id="@+id/action_showQuiz_to_makeQuiz"
+            app:destination="@id/makeQuiz" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz"
+        android:name="com.myownportfolio.quizian.UI.fragments.Quiz"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quiz_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_quiz_to_results"
+            app:destination="@id/results" />
+    </fragment>
+    <fragment
+        android:id="@+id/results"
+        android:name="com.myownportfolio.quizian.UI.fragments.Results"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" >
+        <action
+            android:id="@+id/action_results_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+</navigation>

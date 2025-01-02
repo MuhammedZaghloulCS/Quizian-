@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Quizian</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_the_code">Enter the Code</string>
+    <string name="prepare_quiz"><![CDATA[Prepare Quiz >>]]></string>
+    <string name="lt_lt_add_another_answer"><![CDATA[<<\n Add Another Answer]]></string>
+    <string name="remove_answer"><![CDATA[>>\nRemove Answer ]]></string>
+    <string name="previous_question">>>\nPrevious Question</string>
+    <string name="next_question"><![CDATA[<<\n Next Question\n]]></string>
+    <string name="enter_at_least_2_asnwers_please">Enter at least 2 asnwers, Please</string>
+    <string name="are_you_sure_you_want_to_cancel_the_quiz">Are you sure you want to cancel the Quiz?</string>
+    <string name="confirm_cancelation">Confirm Cancellation</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="question">Question</string>
+    <string name="enter_the_question_please">* Enter the question, please</string>
+    <string name="finish">Finish\n</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<androidx.cardview.widget.CardView
+    android:layout_height="wrap_content"
+    android:elevation="11dp"
+    app:cardCornerRadius="16dp"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/question"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textSize="20sp"
+        android:id="@+id/question_place_holder"
+        android:background="@drawable/corners"/>
+
+
+
+
+</androidx.cardview.widget.CardView>
+</LinearLayout>

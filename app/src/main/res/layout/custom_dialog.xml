@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:id="@+id/custom_dialog"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_cancelation"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/are_you_sure_you_want_to_cancel_the_quiz"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textSize="15sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:id="@+id/confirm"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:fontFamily="@font/comfortaa_bold"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/blue"
+            app:strokeWidth="2dp"
+            android:id="@+id/cancel"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
