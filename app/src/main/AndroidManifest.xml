@@ -17,8 +17,15 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Define the URL structure -->
+                <data
+                    android:scheme="https"
+                    android:host="www.example.com"
+                    android:pathPrefix="/openMain" />
             </intent-filter>
         </activity>
         <meta-data

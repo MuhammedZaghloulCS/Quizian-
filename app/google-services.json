@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "182088543971",
+    "firebase_url": "https://quizian-3d26c-default-rtdb.firebaseio.com",
+    "project_id": "quizian-3d26c",
+    "storage_bucket": "quizian-3d26c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182088543971:android:7f29b4a59109669e05dfd6",
+        "android_client_info": {
+          "package_name": "com.myownportfolio.quizian"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa6nYKyvXswurIZwdt8MVIqCwuzL1Q46o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

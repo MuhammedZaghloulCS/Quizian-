@@ -9,6 +9,7 @@
     android:paddingBottom="30dp"
     android:layout_height="wrap_content">
     <TextView
+        android:id="@+id/dialog_title"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/confirm_cancelation"
@@ -17,6 +18,7 @@
         android:textColor="@color/black"
         android:gravity="center"/>
     <TextView
+        android:id="@+id/dialog_content"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/are_you_sure_you_want_to_cancel_the_quiz"

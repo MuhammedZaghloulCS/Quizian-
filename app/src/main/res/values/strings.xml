@@ -15,5 +15,8 @@
     <string name="cancel">Cancel</string>
     <string name="question">Question</string>
     <string name="enter_the_question_please">* Enter the question, please</string>
-    <string name="finish">Finish\n</string>
+    <string name="finish">Finish</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="send_the_quiz">Send the Quiz</string>
+    <string name="search">Search</string>
 </resources>

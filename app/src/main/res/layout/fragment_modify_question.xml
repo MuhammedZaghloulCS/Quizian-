@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/purple_700"
-    tools:context=".UI.fragments.MakeQuiz">
+    tools:context=".UI.fragments.ModifyQuestion">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -25,7 +25,7 @@
 
 
             <ImageView
-                android:id="@+id/back_button"
+                android:id="@+id/cancel_modification"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center"
@@ -34,7 +34,6 @@
                 android:src="@drawable/back_arrow" />
 
             <TextView
-                android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -47,25 +46,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/num_of_ques"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_margin="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="1/1"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
-            </LinearLayout>
+                android:orientation="vertical"/>
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/attention"
+        android:id="@+id/attention_modify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -77,8 +64,7 @@
         tools:visibility="visible" />
 
     <EditText
-        android:id="@+id/question"
-        android:text="@string/save_changes"
+        android:id="@+id/question_modify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
@@ -92,7 +78,7 @@
         android:textSize="25sp" />
 
     <TextView
-        android:id="@+id/attention2"
+        android:id="@+id/attention2_modify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -116,8 +102,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/answer1"
-                android:text="sddsa"
+                android:id="@+id/answer1_modify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -132,8 +117,7 @@
                 android:textColorHint="@color/white" />
 
             <EditText
-                android:id="@+id/answer2"
-                android:text="sdf"
+                android:id="@+id/answer2_modify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -155,8 +139,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/answer3"
-                android:text="sdfds"
+                android:id="@+id/answer3_modify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -171,7 +154,7 @@
                 android:textColorHint="@color/white" />
 
             <EditText
-                android:id="@+id/answer4"
+                android:id="@+id/answer4_modify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -188,35 +171,24 @@
     </LinearLayout>
 
 
-
-        <Button
-            android:id="@+id/next_question"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00000000"
-            android:text="@string/next_question"
-            android:textAllCaps="false"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            android:textSize="15sp" />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    >
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/finish"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_margin="5dp"
-        android:text="@string/finish"
-        android:backgroundTint="@color/red"
-        android:textColor="@color/white"
-        app:strokeColor="@color/blue"
-        android:gravity="center"
-        app:cornerRadius="16dp"
-        app:strokeWidth="2dp"
-        />
-</LinearLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/savechanges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="5dp"
+            android:text="@string/save_changes"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/white"
+            app:strokeColor="@color/blue"
+            android:gravity="center"
+            app:cornerRadius="16dp"
+            app:strokeWidth="2dp"/>
+
+    </LinearLayout>
 </LinearLayout>

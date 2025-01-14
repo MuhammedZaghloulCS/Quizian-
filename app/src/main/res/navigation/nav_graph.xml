@@ -12,10 +12,15 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_home2_to_makeQuiz"
-            app:destination="@id/makeQuiz" />
+            app:destination="@id/makeQuiz"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_home2_to_quiz"
             app:destination="@id/quiz" />
+
     </fragment>
     <fragment
         android:id="@+id/makeQuiz"
@@ -27,16 +32,27 @@
             app:destination="@id/home2" />
         <action
             android:id="@+id/action_makeQuiz_to_showQuiz"
-            app:destination="@id/showQuiz" />
+            app:destination="@id/showQuiz"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/showQuiz"
         android:name="com.myownportfolio.quizian.UI.fragments.ShowQuiz"
         android:label="fragment_show_quiz"
         tools:layout="@layout/fragment_show_quiz" >
+
         <action
-            android:id="@+id/action_showQuiz_to_makeQuiz"
-            app:destination="@id/makeQuiz" />
+            android:id="@+id/action_showQuiz_to_modifyQuestion"
+            app:destination="@id/modifyQuestion" />
+        <action
+            android:id="@+id/action_showQuiz_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_showQuiz_to_uniqueCode"
+            app:destination="@id/uniqueCode" />
     </fragment>
     <fragment
         android:id="@+id/quiz"
@@ -58,5 +74,26 @@
         <action
             android:id="@+id/action_results_to_home2"
             app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyQuestion"
+        android:name="com.myownportfolio.quizian.UI.fragments.ModifyQuestion"
+        android:label="fragment_modify_question"
+        tools:layout="@layout/fragment_modify_question" >
+        <argument
+            android:name="question"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/uniqueCode"
+        android:name="com.myownportfolio.quizian.UI.fragments.UniqueCode"
+        android:label="fragment_unique_code"
+        tools:layout="@layout/fragment_unique_code" >
+        <action
+            android:id="@+id/action_uniqueCode_to_home2"
+            app:destination="@id/home2" />
+        <argument
+            android:name="code"
+            app:argType="string" />
     </fragment>
 </navigation>
