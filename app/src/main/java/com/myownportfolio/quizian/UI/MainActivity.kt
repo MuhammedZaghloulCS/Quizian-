@@ -1,4 +1,4 @@
-package com.myownportfolio.quizian
+package com.myownportfolio.quizian.UI
 
 import android.app.ComponentCaller
 import android.content.Intent

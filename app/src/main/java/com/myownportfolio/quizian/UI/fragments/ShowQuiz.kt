@@ -50,15 +50,13 @@ class ShowQuiz : Fragment() {
                 findNavController().navigate(action)
             },
             confirmDeleting = { it ->
-                Log.i("Main", myViewModel.returnKeys().contains(it).toString())
                 confirmDeleting(it)
-                Log.i("Main", myViewModel.returnKeys().contains(it).toString())
 
             }
         )
         lifecycleScope.launch {
             myViewModel.questionList.collect { it ->
-                val keys = it.keys.toList()
+                val keys = it.map { it.question }
                 if (keys.isEmpty())
                     findNavController().popBackStack()
             }
@@ -72,7 +70,7 @@ class ShowQuiz : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             myViewModel.questionList.collect { updatedList ->
                 adapter.run {
-                    updateList(updatedList.keys.toMutableList())
+                    updateList(updatedList.map { it.question }.toMutableList())
                 }
 
             }
@@ -82,7 +80,7 @@ class ShowQuiz : Fragment() {
         binding.send.setOnClickListener {
             val code = generateUniqueCode()
             myRef.child(code)
-                .setValue(myViewModel.questionList.value)
+                .setValue(myViewModel.questionList.value.associate { it.question to it.answers })
             val action = ShowQuizDirections.actionShowQuizToUniqueCode(code)
             findNavController().navigate(
                 action,

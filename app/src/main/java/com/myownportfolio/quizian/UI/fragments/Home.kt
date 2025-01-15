@@ -7,17 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.addCallback
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import com.myownportfolio.quizian.MVVM.QuestionViewModel
 import com.myownportfolio.quizian.R
 import com.myownportfolio.quizian.databinding.FragmentHomeBinding
 
 class Home : Fragment() {
     lateinit var binding: FragmentHomeBinding
+    val myViewModel: QuestionViewModel by viewModels()
     val database= Firebase.database
     val myRef=database.getReference("codes")
     override fun onCreateView(
@@ -42,24 +45,9 @@ class Home : Fragment() {
         requireActivity().finish()
     }
 
-    fun search(code:String)
+   suspend fun search(code:String)
     {
-        myRef.addValueEventListener(object :ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val keys = snapshot.children.map { it.key }
-                if (keys.contains(code))
-                {
-                    val action=HomeDirections.actionHome2ToShowQuiz(code)
-                    findNavController().navigate(action)
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-
-            }
-
-        })
-
+        myViewModel.getCodes().
     }
 
 }

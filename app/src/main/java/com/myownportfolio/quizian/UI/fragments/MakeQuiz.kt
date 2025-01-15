@@ -7,14 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.myownportfolio.quizian.MVVM.QuestionViewModel
-import com.myownportfolio.quizian.MainActivity
 import com.myownportfolio.quizian.R
 import com.myownportfolio.quizian.databinding.FragmentMakeQuizBinding
 
