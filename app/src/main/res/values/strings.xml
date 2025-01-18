@@ -19,4 +19,6 @@
     <string name="save_changes">Save Changes</string>
     <string name="send_the_quiz">Send the Quiz</string>
     <string name="search">Search</string>
+    <string name="the_results_will_appear_after_the_quiz_has_ended">The results will appear after the quiz has ended</string>
+    <string name="lt_lt_go_home"><![CDATA[<< Go Home]]></string>
 </resources>

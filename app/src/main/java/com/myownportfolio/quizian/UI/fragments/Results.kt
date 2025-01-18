@@ -11,42 +11,31 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.myownportfolio.quizian.R
+import com.myownportfolio.quizian.databinding.FragmentResultsBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [Results.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Results : Fragment() {
 
-    val ref= FirebaseDatabase.getInstance().getReference("codes")
+    val ref = FirebaseDatabase.getInstance().getReference("codes")
 
+    lateinit var binding: FragmentResultsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
+        binding = FragmentResultsBinding.inflate(layoutInflater)
+        setupUI()
 
-        ref.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                Log.i("Main", snapshot.child("1v7Btb").children.map { it.value as List<String> }::class.toString())
 
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
-        })
-
-        return inflater.inflate(R.layout.fragment_results, container, false)
+        return binding.root
     }
 
+    private fun setupUI() {
+        binding.appName.animate().apply {
+            duration = 2000
+            alpha(1f)
+        }.start()
+    }
 
 }

@@ -1,6 +1,8 @@
 package com.myownportfolio.quizian.UI.fragments
 
 import android.app.Dialog
+import android.content.Context
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -78,16 +80,38 @@ class ShowQuiz : Fragment() {
         }
 
         binding.send.setOnClickListener {
-            val code = generateUniqueCode()
-            myRef.child(code)
-                .setValue(myViewModel.questionList.value.associate { it.question to it.answers })
-            val action = ShowQuizDirections.actionShowQuizToUniqueCode(code)
-            findNavController().navigate(
-                action,
-                NavOptions.Builder().setPopUpTo(R.id.home2, false).build()
-            )
-
+            if (isInternetAvailable(binding.root.context)) {
+                val code = generateUniqueCode()
+                myRef.child(code)
+                    .setValue(myViewModel.questionList.value.associate { it.question to it.answers })
+                    .addOnSuccessListener {
+                        val action = ShowQuizDirections.actionShowQuizToUniqueCode(code)
+                        findNavController().navigate(
+                            action,
+                            NavOptions.Builder().setPopUpTo(R.id.home2, false).build()
+                        )
+                    }.addOnFailureListener {
+                        Toast.makeText(
+                            binding.root.context,
+                            "Please try again later",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+            } else {
+                Toast.makeText(
+                    binding.root.context,
+                    "No internet connection. Please try again later.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
+
+
+
+
+
+
+
 
 
         return binding.root
@@ -153,6 +177,12 @@ class ShowQuiz : Fragment() {
                 }
             }
         }
+
     }
 
+    fun isInternetAvailable(context: Context): Boolean {
+        val connectivityManager =
+            context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        return connectivityManager.activeNetwork != null
+    }
 }

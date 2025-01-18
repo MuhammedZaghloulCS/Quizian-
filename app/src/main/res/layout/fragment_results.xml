@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_700"
+    android:orientation="vertical"
     tools:context=".UI.fragments.Results">
-
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:alpha="0"
+        android:fontFamily="@font/allan_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="55sp"
+        tools:alpha="1" />
+    <TextView
+        android:id="@+id/terminate_quiz_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="130dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/the_results_will_appear_after_the_quiz_has_ended"
+        />
+    <Button
+        android:id="@+id/go_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lt_lt_go_home"
+        android:textSize="20sp"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/transparent"
+        />
+</LinearLayout>
