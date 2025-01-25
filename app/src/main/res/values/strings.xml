@@ -8,7 +8,7 @@
     <string name="remove_answer"><![CDATA[>>\nRemove Answer ]]></string>
     <string name="previous_question">>>\nPrevious Question</string>
     <string name="next_question"><![CDATA[<<\n Next Question\n]]></string>
-    <string name="enter_at_least_2_asnwers_please">Enter at least 2 asnwers, Please</string>
+    <string name="enter_at_least_2_asnwers_please">Enter at least 2 asnwers, please</string>
     <string name="are_you_sure_you_want_to_cancel_the_quiz">Are you sure you want to cancel the Quiz?</string>
     <string name="confirm_cancelation">Confirm Cancellation</string>
     <string name="confirm">Confirm</string>
@@ -21,4 +21,5 @@
     <string name="search">Search</string>
     <string name="the_results_will_appear_after_the_quiz_has_ended">The results will appear after the quiz has ended</string>
     <string name="lt_lt_go_home"><![CDATA[<< Go Home]]></string>
+    <string name="click_long_press_on_the_correct_answer_please">Click long press on the correct answer, please</string>
 </resources>
